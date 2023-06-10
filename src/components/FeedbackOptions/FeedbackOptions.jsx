@@ -1,7 +1,7 @@
 import React from "react";
 
 import PropTypes from 'prop-types';
-import { ButtonList, Button } from '..FeedbackOptions.styled';
+import { ButtonList, Button } from './FeedbackOptions.styled';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
 return (
