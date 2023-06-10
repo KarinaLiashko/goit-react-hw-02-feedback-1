@@ -1,15 +1,14 @@
-import { Component } from 'react';
-import FeedbackOptions from '.FeedbackOptions';
+import React from 'react';
+import FeedbackOptions from 'components/FeedbackOptions';
 import Statistics from 'components/Statistics';
 import Notification from 'components/Notification';
 
-class App extends Component {
+export class App extends React.Component {
   state = {
     good: 0,
     neutral: 0,
     bad: 0,
   };
-
 
   onLeaveFeedback = option => {
     this.setState(prevState => ({
