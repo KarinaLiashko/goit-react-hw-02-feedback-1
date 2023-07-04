@@ -1,8 +1,10 @@
 import styled from '@emotion/styled';
 
 export const ButtonList = styled.div`
-  display: flex;
   gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
 `;
 
 export const Button = styled.button`

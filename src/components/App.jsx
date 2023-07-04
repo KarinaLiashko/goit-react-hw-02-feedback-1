@@ -1,7 +1,8 @@
-import React from 'react';
-import FeedbackOptions from 'components/FeedbackOptions';
-import Statistics from 'components/Statistics';
-import Notification from 'components/Notification';
+import  React  from 'react';
+import  FeedbackOptions  from 'components/FeedbackOptions';
+import  Statistics  from 'components/Statistics';
+import  Notification  from 'components/Notification';
+import { Section }  from 'components/Section';
 
 export class App extends React.Component {
   state = {
@@ -28,7 +29,7 @@ export class App extends React.Component {
   }
     
   render() {
-    const good = this.state.good;
+    const  good = this.state.good;
     const bad = this.state.bad;
     const neutral = this.state.neutral;
     const total = this.countTotalFeedback(good, bad, neutral);
@@ -53,17 +54,16 @@ export class App extends React.Component {
     }
     return (
       <>
-        <h1>Please leave feedback</h1>
+        <Section title="Please leave feedback">
         <FeedbackOptions
           options={['good', 'neutral', 'bad']}
           onLeaveFeedback={this.onLeaveFeedback}
-        />
-
-        <h1>Statistics</h1>
-        {content}
+          />
+          </Section>
+        <Section title="Statistics">
+          {content}
+        </Section>
       </>
     );
   }
 }
-
-
